@@ -38,7 +38,7 @@ class App extends Component {
       message="Are you sure?" 
       ></Prompt>
       <input type="button" value={this.state.loggedin ?'Log Out':'Log In'} onClick={this.loginHandle}/>
-      
+      <Switch>
       <Route path="/home" exact strict  
         render={()=>(this.state.loggedin ? (<Home/>)
         :(<Redirect to="/"/>))}
@@ -53,7 +53,7 @@ class App extends Component {
         :(<Redirect to="/"/>))}
 
         />
-        
+        </Switch>
       </div>
       </Router>
       
